@@ -58,6 +58,11 @@ p.label {
 
 #namebox input {
     width: 70%;
+    height: 50px;
+    width: 300px;
+    font-size: 2em;
+    border: 2px solid black;
+    padding: 5px;
 }
 
 #namebox h1 {

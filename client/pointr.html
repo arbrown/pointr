@@ -60,21 +60,26 @@
 
 <template name="name">
 	<div id="namebox">
-		<input id="namebox" type="text" />
-		<button name="submit" class="submit">Submit</button>
+		<input id="namebox" type="text" value="change your name"/>
+		<!--button name="submit" class="submit">Submit</button-->
 	</div>
 </template>
 
 <template name="voters">
 	<p class="label">Voters:</p>
 	<div class="voters">
-		<span> TESTING</span>
 		{{#each voter_list}}
-			Someone: {{name}}
+			{{> voter }}
 		{{/each}}
-		<span>123</span>
 	</div>
 </template>
+
+<template name="voter">
+	<div class="voter">
+		{{name}}
+	</div>
+</template>
+
 
 <template name="hello">
   <h1>Hello World!</h1>

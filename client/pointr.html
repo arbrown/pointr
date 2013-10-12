@@ -1,0 +1,83 @@
+<head>
+  <title>P0!^+r</title>
+</head>
+
+<body>
+  {{> page}}
+</body>
+
+<template name="page">
+	<div id="main">
+		<div id="left">
+			{{> buttons }}
+			{{> results }}
+		</div>
+		<div id="right">
+			{{> name }}
+			{{> voters }}
+		</div>
+	</div>
+
+</template>
+
+<template name="buttons">
+	<div class="points">
+		<div>
+			<div class="square">1</div>
+			<div class="square">2</div>
+		</div>
+		<div>
+			<div class="square">3</div>
+			<div class="square">4</div>
+		</div>
+		<div>
+			<div class="thedreaded5">5</div>
+		</div>
+	</div>
+</template>
+
+<template name="results">
+	<div>
+		{{#if show}}
+			<div class="votes">
+				{{#each voter}}
+					{{> vote}}
+				{{/each}}
+			</div>
+			<p class="label">Awaiting results...</p>
+		{{/if}}
+	</div>
+</template>
+
+<template name="vote">
+	<div class="vote">
+			<div class="header">
+				{{name}}
+				<span class="vote_text">{{vote_points}}</span>
+			</div>
+	</div>
+</template>
+
+<template name="name">
+	<div id="namebox">
+		<input id="namebox" type="text" />
+		<button name="submit" class="submit">Submit</button>
+	</div>
+</template>
+
+<template name="voters">
+	<p class="label">Voters:</p>
+	<div class="voters">
+		<span> TESTING</span>
+		{{#each voter_list}}
+			Someone: {{name}}
+		{{/each}}
+		<span>123</span>
+	</div>
+</template>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>

@@ -78,3 +78,28 @@ p.label {
     float: left;
     width: 50%;
 }
+
+.minibutton {
+    display: inline-block;
+}
+
+#voters .voter {
+        border-top: 1px solid #ccc;
+}
+
+#voters .voter:hover .destroy {
+    background: url('/destroy.png') no-repeat 0 0;
+}
+
+#voters .voter .destroy:hover {
+    background-position: 0 -20px;
+}
+
+#voters .voter .destroy {
+    cursor: pointer;
+    /* position: absolute;*/
+    left: 5px;
+    top: 15px;
+    height: 20px;
+    width: 20px;
+}

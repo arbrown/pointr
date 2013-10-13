@@ -67,7 +67,7 @@
 
 <template name="voters">
 	<p class="label">Voters:</p>
-	<div class="voters">
+	<div id="voters">
 		{{#each voter_list}}
 			{{> voter }}
 		{{/each}}
@@ -76,7 +76,12 @@
 
 <template name="voter">
 	<div class="voter">
-		{{name}}
+		<span>{{name}}</span>
+		<span class="minibutton destroy">
+			<!--span class="ui-icon ui-icon-circle-close"/-->
+			<div class="destroy"></div>
+		</span>
+		<!-- You know what I don't know how to do?  Make this an actual jquery-ui button... -->
 	</div>
 </template>
 

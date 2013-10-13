@@ -17,6 +17,11 @@ Template.name.events({
   }
 });
 
+Template.voter.events({
+  'click .destroy': function() {
+    Voters.remove(this._id);
+  },
+});
 
 Meteor.startup(function () {
 

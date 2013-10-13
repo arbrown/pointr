@@ -14,7 +14,12 @@ if (Meteor.isServer) {
 
       clearVotes: function() {
       	return Votes.remove({});
-      }
+      },
+
+      removeVotes: function(voter) {
+      	Votes.remove({voter: voter});
+      },
+
 
     });
 

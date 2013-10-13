@@ -23,9 +23,10 @@ Template.buttons.points = function () {
 Template.pointButton.events({
   'click .voteButton': function (evt) {
     var id = Session.get('voter_id');
-    var already_voted = Votes.findOne({voter_id: id});
+    var voter = Voters.findOne(id);
+    var already_voted = Votes.findOne({voter: voter});
     if (!already_voted){
-      Votes.insert({voter_id: id, vote: this.value});
+      Votes.insert({voter: voter, vote: this.value});
     }
     else {
       //Votes.update({voter_id: id}, {$set {vote: this.value}});
@@ -44,9 +45,22 @@ Template.name.events({
 
 Template.voter.events({
   'click .destroy': function() {
+    var vote = Votes.findOne({voter: Voters.findOne(this._id)});
+    //Meteor.call('remove_votes', this);
+    if (vote){
+      Votes.remove(vote._id);
+    }
     Voters.remove(this._id);
   },
 });
+
+Template.results.show = function() {
+  return Votes.find().count() == Voters.find().count();
+};
+
+Template.results.voters = function() {
+  return Votes.find();
+}
 
 Template.results.events({
   'click .clearVotes': function() {
@@ -55,7 +69,6 @@ Template.results.events({
 });
 
 Meteor.startup(function () {
-
   var voter_id = Voters.insert({name: 'change your name'});
   Session.set('voter_id', voter_id);
 });

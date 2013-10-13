@@ -51,10 +51,15 @@
 	<div>
 		{{#if show}}
 			<div class="votes">
-				{{#each voter}}
-					{{> vote}}
-				{{/each}}
+				<ul>
+					{{#each voters}}
+					<li>
+						{{> vote}}
+					</li>
+					{{/each}}
+				</ul>
 			</div>
+		{{else}}
 			<p class="label">Awaiting results...</p>
 		{{/if}}
 	</div>
@@ -66,8 +71,8 @@
 <template name="vote">
 	<div class="vote">
 			<div class="header">
-				{{name}}
-				<span class="vote_text">{{vote_points}}</span>
+				{{voter.name}}
+				<span class="vote_text">{{vote}}</span>
 			</div>
 	</div>
 </template>

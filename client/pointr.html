@@ -21,18 +21,29 @@
 </template>
 
 <template name="buttons">
+	<!--div class="points">
+		<div>
+			<div class="square vote1">1</div>
+			<div class="square vote2">2</div>
+		</div>
+		<div>
+			<div class="square vote3">3</div>
+			<div class="square vote4">4</div>
+		</div>
+		<div>
+			<div class="thedreaded5 vote5">5</div>
+		</div>
+	</div-->
 	<div class="points">
-		<div>
-			<div class="square">1</div>
-			<div class="square">2</div>
-		</div>
-		<div>
-			<div class="square">3</div>
-			<div class="square">4</div>
-		</div>
-		<div>
-			<div class="thedreaded5">5</div>
-		</div>
+		{{#each points}}
+			{{> pointButton}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="pointButton">
+	<div class="square voteButton">
+		{{display}}
 	</div>
 </template>
 
@@ -47,6 +58,9 @@
 			<p class="label">Awaiting results...</p>
 		{{/if}}
 	</div>
+	<a class="header clearVotes">
+		Clear votes
+	</a>
 </template>
 
 <template name="vote">

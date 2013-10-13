@@ -10,6 +10,10 @@ if (Meteor.isServer) {
 
         return Voters.remove({});
 
+      },
+
+      clearVotes: function() {
+      	return Votes.remove({});
       }
 
     });

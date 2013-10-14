@@ -59,6 +59,13 @@
 					{{/each}}
 				</ul>
 			</div>
+			<div id="stats">
+				<ul>
+					<li class="stat">Minimum: {{minimum}}</li>
+					<li class="stat">Maximum: {{maximum}}</li>
+					<li class="stat">Average: {{average}}</li>
+				</ul>
+			</div>
 		{{else}}
 			<p class="header">Awaiting results...</p>
 		{{/if}}
@@ -96,14 +103,14 @@
 </template>
 
 <template name="voter">
-	<div class="voter">
-
+	<div class="voter">	
+		<!-- You know what I don't know how to do?  Make this an actual jquery-ui button... -->
 		<span class="minibutton destroy">
 			<!--span class="ui-icon ui-icon-circle-close"/-->
 			<div class="destroy"></div>
 		</span>
 		<span>{{name}}</span>
-		<!-- You know what I don't know how to do?  Make this an actual jquery-ui button... -->
+
 	</div>
 </template>
 

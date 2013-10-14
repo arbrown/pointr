@@ -1,9 +1,28 @@
 /* CSS declarations go here */
-p.label {
-	font-size: 25px;
+/*        DOCUMENT STRUCTURE         */
+#left {
+    float: left;
+    width: 40%;
 }
 
-.square {
+#right {
+    float: left;
+    width: 50%;
+}
+
+/*             Number Pad            */
+#points {
+    margin: auto;
+    border:4px solid #999999;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding:2px;
+    width:200px;
+    height:314px;
+    background-color:#999999;
+}
+
+#points .square {
     cursor: pointer;
     width:84px;
     height:84px;
@@ -17,41 +36,16 @@ p.label {
     font-size: 65px;
 }
 
-.thedreaded5 {
-    cursor: pointer;
-    width:84px;
-    height:84px;
-    border:4px solid #eeeee8;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    margin-left: 58px;
-    margin-top: 2px;
-    /*float:left;*/
-    display: inline-block;
-    text-align: center;
-    background-color:#eeeee8;
-    color:#FF0000;
-    border: solid;
-    border-color: #FF0000;
-    font-size: 65px;
-    font-weight: bold;
-}
-
-.points {
-    margin: auto;
-    border:4px solid #999999;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    padding:2px;
-    width:200px;
-    height:314px;
-    background-color:#999999;
-}
-
+/*              Results              */
 #votes .header {
-    font-size: 1.25em;
+    font-size: 3em;
 }
 
+.clearVotes {
+    cursor: pointer;
+}
+
+/*              Namebox              */
 #namebox {
     height: 100px;
 }
@@ -65,26 +59,16 @@ p.label {
     padding: 5px;
 }
 
-#namebox h1 {
-    float: left;
-}
-
-#left {
-    float: left;
-    width: 40%;
-}
-
-#right {
-    float: left;
-    width: 50%;
-}
-
-.minibutton {
-    display: inline-block;
+/*             Voter List            */
+#voterlist p.label {
+    font-size: 25px;
 }
 
 #voters .voter {
-        border-top: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: .5em 0px;
+    font-size: 1em;
+
 }
 
 #voters .voter:hover .destroy {
@@ -104,6 +88,14 @@ p.label {
     width: 20px;
 }
 
-.clearVotes {
-    cursor: pointer;
+.voter .minibutton {
+    display: inline-block;
 }
+
+
+
+
+
+
+
+

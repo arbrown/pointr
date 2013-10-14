@@ -34,7 +34,7 @@
 			<div class="thedreaded5 vote5">5</div>
 		</div>
 	</div-->
-	<div class="points">
+	<div id="points">
 		{{#each points}}
 			{{> pointButton}}
 		{{/each}}
@@ -50,7 +50,7 @@
 <template name="results">
 	<div>
 		{{#if show}}
-			<div class="votes">
+			<div id="votes">
 				<ul>
 					{{#each voters}}
 					<li>
@@ -60,7 +60,7 @@
 				</ul>
 			</div>
 		{{else}}
-			<p class="label">Awaiting results...</p>
+			<p class="header">Awaiting results...</p>
 		{{/if}}
 	</div>
 	<a class="header clearVotes">
@@ -70,7 +70,7 @@
 
 <template name="vote">
 	<div class="vote">
-			<div class="header">
+			<div class="vote">
 				{{voter.name}}
 				<span class="vote_text">{{vote}}</span>
 			</div>
@@ -85,21 +85,24 @@
 </template>
 
 <template name="voters">
-	<p class="label">Voters:</p>
-	<div id="voters">
-		{{#each voter_list}}
-			{{> voter }}
-		{{/each}}
+	<div id="voterlist">
+		<p class="label">Voters:</p>
+		<div id="voters">
+			{{#each voter_list}}
+				{{> voter }}
+			{{/each}}
+		</div>
 	</div>
 </template>
 
 <template name="voter">
 	<div class="voter">
-		<span>{{name}}</span>
+
 		<span class="minibutton destroy">
 			<!--span class="ui-icon ui-icon-circle-close"/-->
 			<div class="destroy"></div>
 		</span>
+		<span>{{name}}</span>
 		<!-- You know what I don't know how to do?  Make this an actual jquery-ui button... -->
 	</div>
 </template>

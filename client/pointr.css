@@ -41,6 +41,18 @@
     font-size: 3em;
 }
 
+#stats .stat {
+    list-style: circle;
+    font-size: 1.5em;
+    background-color: #FF9966;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: .25em;
+    width:25%;
+    padding-left: 2em;
+}
+
 .clearVotes {
     cursor: pointer;
 }

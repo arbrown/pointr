@@ -3,7 +3,7 @@
   "dependencies": {
     "basePackages": {
       "jquery-ui": {},
-      "jquery-ui-bootstrap": {}
+      "mongodb-server-aggregation": {}
     },
     "packages": {
       "jquery-ui": {
@@ -11,10 +11,10 @@
         "tag": "v1.9.2",
         "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
       },
-      "jquery-ui-bootstrap": {
-        "git": "https://github.com/TimHeckel/meteor-jquery-ui-bootstrap.git",
-        "tag": "v0.1.2",
-        "commit": "fa742a85639307003e105898e15b631394b63509"
+      "mongodb-server-aggregation": {
+        "git": "https://github.com/zvictor/meteor-mongo-server.git",
+        "tag": "v1.0.3",
+        "commit": "416293e383f53e2506f1b7a1a7687390cbaf0e68"
       }
     }
   }
